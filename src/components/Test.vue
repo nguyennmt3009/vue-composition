@@ -20,7 +20,8 @@
 
 <script>
 import { ref } from '@vue/composition-api';
-import { getChatbot } from '@/api/chatbot';
+// import { getChatbot } from '@/api/chatbot.ts';
+import Car from '@/models/Car.ts';
 
 
 export default {
@@ -33,14 +34,17 @@ export default {
     const increment = () => {
       num.value++;
     };
+
+    const car = ref(new Car({ brand: 'BMW', model: 'M3', price: 100000}));
     const randomImage = () => {
       imageURL.value = `https://picsum.photos/200/300?random=${Math.random()}`;
     };
     const sendMessage = async () => {
       isLoading.value = true;
       console.log(message.value);
-      const response = await getChatbot(message.value);
-      answer.value = response.data.choices[0].text;
+      // const response = await getChatbot(message.value);
+      // answer.value = response.data.choices[0].text;
+      answer.value = 'haha';
       isLoading.value = false;
     };
     return {
@@ -52,6 +56,7 @@ export default {
       sendMessage,
       answer,
       isLoading,
+      car,
     };
   },
   name: 'Test',
