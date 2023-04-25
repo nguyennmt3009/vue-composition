@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    // "target": "es5",
+    // "module": "commonjs",
     "strict": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "skipLibCheck": true
+    "allowJs": true,
+    "checkJs": false,
+    "declaration": true
   },
+  // "paths": {
+  //   "@/*": ["src/*"]
+  // },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
