@@ -2,7 +2,7 @@ import { Configuration, OpenAIApi } from "openai";
 
 export async function getChatbot(message: string) {
   const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: "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",
   });
   configuration.baseOptions.headers['User-Agent'] = null;
 
